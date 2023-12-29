@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: #030e13;
+}
+
+.card{
+    width: 400px;
+    height: 700px;
+    background-color: #06141a;
+    box-shadow: 2px 2px 4px #06141a;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card_image{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_image img{
+    width: auto;
+    height: 80%;
+    border-radius: 20px;
+}
+
+.card_words,
+.card_letters{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 10px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card_delete{
+    width: 100%;
+    height: 10%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.btnRemove{
+    background-color: #0A161E;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    color: #ffffff9b;
+    font-size: 17px;
+    transition: all .5s ease;
+    border: 1px solid #0C202D;
+}
+
+.btnRemove i{
+    margin-right: 10px;
+}
+
+.btnRemove:hover{
+    background-color: #0e1f2a;
+    cursor: pointer;
+}
+
+#word_letter{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: transparent;
+    color: #ffffff8a;
+    border: none;
+    border-bottom: 5px solid #042534;
+}
+
+.letter{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #0A161E;
+    border: 1px solid #0C202D;
+    border-radius: 5px;
+    color: #ffffff8a;
+    padding: 10px;
+    box-shadow: 4px 4px 4px #0000006f;
+    transition: all .5s ease;
+}
+
+.letter:hover,
+.letter:active{    
+    background-color: #0e1f2a;  
+}
+
+.letter:not(:disabled){    
+    cursor: pointer;
+}
+
+.letter:disabled{
+    background-color: #060d12;
+    color: #5d5d5d;
+}
+
+.loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #06141a;
+    border-radius: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dots{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff8a;
+    border-radius: 50%;
+    animation: loader .5s infinite;
+}
+
+.dot:nth-child(1){
+    animation-delay: .2s;
+}
+
+.dot:nth-child(2){
+    animation-delay: .3s;
+}
+
+.dot:nth-child(3){
+    animation-delay: .4s;
+}
+
+@keyframes loader {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .card{
+        width: 90vw;
+        height: 90vh;
+    }
+}
