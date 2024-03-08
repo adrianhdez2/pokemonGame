@@ -11,8 +11,7 @@ Aquí tienes una demo de este gran proyecto :)
 https://adrianhdez2.github.io/pokemonGame/
 ## Screenshots
 
-![App Screenshot](https://adrianhdez2.github.io/pokemonGame/assets/img/pokemon_game.png)
-
+![pokemon game](https://github.com/adrianhdez2/pokemonGame/assets/79607030/a510f4de-8cc2-499f-b5b0-1af227fa773f)
 
 ## Authors
 
